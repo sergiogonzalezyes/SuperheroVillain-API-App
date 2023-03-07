@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div>
+            <form action="/process_form" method="post">
+                <h2 class="welcomeheader">Welcome to the super hero and villain search engine!</h2>
+                <div class="form-group">
+                    <label for="homeUserInput" class="form-label">Enter the name of the hero or villain you'd like to search: </label>
+                    <input type="text" id="superhero" name="superhero" class="form-control" placeholder="Name" required
+                    autofocus>
+                </div>
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+            </form>
+        </div>
+        <div class="jumbotron">
+            <% if (locals.hero) { %>
+                <div class="hero-details">
+                  <div class="hero-text">
+                    <p>Your hero/villain is: <%= hero.name %>! </p>
+                    <p class="round3">
+                      <%= hero.name %> is also known by his/her common aliases:
+                    </p>
+                    <% locals.hero.biography.aliases.forEach(function(aliases)  {%>
+                      <li>
+                        <strong><%= aliases %></strong>
+                      </li>
+                    <% }); %>
+                  </div>
+                  <div class="hero-image">
+                    <img src="<%= hero.image.url %>" alt="<%= hero.name%> image">
+                  </div>
+                </div>
+              <% } %>                        
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>
