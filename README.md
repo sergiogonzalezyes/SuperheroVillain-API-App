@@ -21,8 +21,6 @@ This project is a web application that leverages the power of [Superhero API](ht
 
 Here is a screenshot of the web application in action:
 
-![Screenshot of the SuperheroVillain-API-App](screenshot.png)
-
 You can also try out the application live by visiting the [demo site](https://example.com).
 
 ## Installation
