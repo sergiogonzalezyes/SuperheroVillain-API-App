@@ -5,5 +5,9 @@
     "axios": "^0.21.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {
+    "ejs-cli": "^2.2.3"
+  },
+  "homepage": "https://github.com/sergiogonzalezyes/SuperheroVillain-API-App"
 }
