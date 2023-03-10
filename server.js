@@ -10,7 +10,6 @@ const axios = require('axios');
 
 var selectedID = "";
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // set the view engine to ejs
@@ -53,13 +52,10 @@ app.post('/process_form', function(req, res){
       console.log(error);
     });
   });
-
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(HTML_PATH, '404.html'));
-  });
   
-  const port = process.env.PORT || 8080;
-  app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-  });
+
+// the web application will "listen" or wait for any requests through the port 8080.
+app.listen(8080, function() {
+// console.log will let programmer know that web application has received a request through port 8080.
+console.log('8080 is the magic port');
+});
