@@ -8,9 +8,6 @@ const bodyParser  = require('body-parser');
 // required module to make calls to a REST API
 const axios = require('axios');
 
-const path = require('path');
-
-
 var selectedID = "";
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
