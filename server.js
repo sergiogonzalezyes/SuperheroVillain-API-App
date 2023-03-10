@@ -1,6 +1,4 @@
 // load the things we need
-const HTML_PATH = path.join(__dirname, 'public');
-
 var express = require('express');
 var app = express();
 const bodyParser  = require('body-parser');
@@ -9,8 +7,7 @@ const bodyParser  = require('body-parser');
 const axios = require('axios');
 
 var selectedID = "";
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.urlencoded({ extended: true }));
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -20,7 +17,7 @@ app.set('view engine', 'ejs');
 // home page 
 app.get('/', function(req, res) {  
     // this will render our new home page 
-    res.sendFile(path.join(HTML_PATH, 'home.html'));
+    res.render("pages/home");
 });
 
 // this is the form that is presented to user upon landing of home page
@@ -55,7 +52,6 @@ app.post('/process_form', function(req, res){
   
 
 // the web application will "listen" or wait for any requests through the port 8080.
-app.listen(8080, function() {
+app.listen(8080);
 // console.log will let programmer know that web application has received a request through port 8080.
 console.log('8080 is the magic port');
-});
