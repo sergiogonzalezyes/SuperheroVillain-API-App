@@ -13,6 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+
+// Serve static files from the "dist" directory
+app.use(express.static(path.join(__dirname, 'dist')));
+
+
 // Define the routes
 app.get('/', function(req, res) {
     res.render('pages/home');
