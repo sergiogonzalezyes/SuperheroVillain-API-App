@@ -1,6 +1,6 @@
 {
     "builds": [
-      { "src": "server.js", "use": "@vercel/node" }
+      { "src": "superherovillain-api-app/server.js", "use": "@vercel/node" }
     ],
     "routes": [
       { "src": "/(.*)", "dest": "/" }

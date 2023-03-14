@@ -8,6 +8,6 @@
     "mkdirp": "^2.1.5"
   },
   "scripts": {
-    "build": "mkdirp dist && ejs-cli views/pages/**/*.ejs -o dist --extension ejs --partials views/partials"
+    "build": "mkdirp dist && ejs-cli views/pages/**/*.ejs -o dist --extension ejs --partials views/partials --outputDir dist"
   }
 }
