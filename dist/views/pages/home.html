@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<title>Hero/Villain API</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body { padding-top:50px; }
+    /* Set the background color to dark gray */
+body {
+  background-color: #333333;
+}
+
+/* Set the color of text to white */
+body, a, h1, h2, h3, h4, h5, h6, label, input {
+  color: #FFFFFF;
+}
+
+/* Set the color of links to light gray */
+a {
+  color: #CCCCCC;
+}
+
+/* Set the color of buttons to light gray */
+.btn {
+  background-color: #CCCCCC;
+  color: #333333;
+}
+
+/* Set the color of navbar to dark gray */
+.navbar {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+/* Add transition effect to form inputs */
+.form-control {
+  transition: border-color 0.2s ease-in-out;
+}
+.form-control:focus {
+  border-color: #CCCCCC;
+  box-shadow: none;
+}
+
+/* Add transition effect to form inputs */
+.form-control {
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+}
+.form-control:focus {
+  border-color: #CCCCCC;
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+.form-control:hover {
+  border-color: #CCCCCC;
+  box-shadow: none;
+  transform: translateY(-0.5px);
+}
+
+
+/* Add transition effect to form submit button */
+.btn {
+  transition: all 0.2s ease-in-out;
+  margin-top: 10px;
+  width: 600px;
+}
+.btn:hover {
+  background-color: #CCCCCC;
+  color: #333333;
+  transform: translateY(-1px);
+}
+.btn:focus {
+  box-shadow: none;
+  transform: translateY(-0.5px);
+}
+
+.jumbotron {
+    background-color: transparent
+}
+
+
+/* Flexbox layout for hero details */
+.hero-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Set order for hero text and image */
+.hero-text {
+  order: 1;
+}
+
+.hero-image {
+  order: 2;
+}
+
+
+</style>
+
+
+</head>
+
+<body class="container">
+
+    <header>
+        <nav class="navbar navbar-expand-lg>
+  <a class="navbar-brand" href="/">Home</a>
+  <ul class="navbar-nav mr-auto">
+  </ul>
+</nav>
+    </header>
+
+    <main>
+        <div>
+            <form action="/process_form" method="post">
+                <h2 class="welcomeheader">Welcome to the super hero and villain search engine!</h2>
+                <div class="form-group">
+                    <label for="homeUserInput" class="form-label">Enter the name of the hero or villain you'd like to search: </label>
+                    <input type="text" id="superhero" name="superhero" class="form-control" placeholder="Name" required
+                    autofocus>
+                </div>
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+            </form>
+        </div>
+        <div class="jumbotron">
+                                    
+        </div>
+    </main>
+
+    <footer>
+        <p class="text-center text-muted">© Copyright Superhero Search Engine</p>
+    </footer>
+</body>
+</html>
